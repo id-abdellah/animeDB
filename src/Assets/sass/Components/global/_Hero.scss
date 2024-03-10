@@ -1,0 +1,130 @@
+.hero {
+    // height: calc(100dvh - 60px);
+    // margin-top: 60px;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-images {
+        width: 90%;
+        height: 90%;
+        position: relative;
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            // background-color: rgba(0, 0, 0, 0.37);
+            box-shadow: inset 119px -200px 209px -22px #181a1b;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            user-select: none;
+        }
+
+        .arrow {
+            color: var(--primary-color);
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-color: var(--secondary-color);
+            top: 50%;
+            transform: translateY(-50%);
+            display: grid;
+            place-content: center;
+            font-size: 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .3s;
+            user-select: none;
+
+            &:hover {
+                filter: grayscale(80%);
+            }
+        }
+
+        .arrow.next-arrow {
+            right: -5px;
+            rotate: 45deg;
+
+            svg {
+                rotate: -45deg;
+            }
+
+            @media (max-width: 580px) {
+                right: 25px;
+            }
+        }
+
+        .arrow.prev-arrow {
+            rotate: -45deg;
+            left: -5px;
+
+            @media (max-width: 580px) {
+                left: 25px;
+            }
+
+            svg {
+                rotate: 45deg;
+            }
+        }
+
+        .covers-slider {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 20px;
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+
+
+            @media (max-width: 767px) {
+                & {
+                    width: 100%;
+                    grid-template-columns: 1fr;
+                    display: flex;
+                    overflow-x: auto;
+                    padding: 6px 10px;
+                }
+            }
+
+            .item {
+                cursor: pointer;
+                transition: .3s;
+
+                @media (max-width: 767px) {
+                    & {
+                        min-width: 60px;
+                    }
+                }
+
+
+                img {
+                    transition: .3s;
+                }
+
+                img.active {
+                    scale: 1.1;
+                    transform: translateY(-10px);
+                }
+
+                &:hover {
+                    img {
+                        scale: 1.1;
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+}

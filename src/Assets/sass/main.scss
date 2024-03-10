@@ -1,0 +1,27 @@
+@use "./Components/global/Global";
+@use "./Components/global/Navbar";
+@use "./Components/global/Hero";
+
+// home page section components
+@use "./Components/global/SectionTitle";
+@use "./Components/Home-Page/TopAnimeSection";
+@use "./Components/Home-Page/CurrentSeasonSections";
+@use "./Components/Home-Page/TopCharactersSection";
+
+// top anime page
+@use "./Components/global-class-anime-page/global-class-anime";
+
+// top characters page 
+@use "./Components/characters/charactersPage.scss";
+
+// character informations page
+@use "./Components/character-informations/CharacterInformationsPage";
+
+// anime informations page
+@use "./Components/anime-info/animeInfoPage";
+
+// Loader
+@use "./Components/global/Loading";
+
+// footer
+@use "./Components/global/Footer"

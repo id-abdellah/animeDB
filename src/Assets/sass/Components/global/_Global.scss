@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semiBold: 600;
+    --font-bold: 700;
+    --font-extraBold: 800;
+    --font-black: 900;
+
+    // colors to use
+
+    --primary-color: #181a1b;
+    --gray-color: rgb(168, 168, 168);
+    --secondary-color: #fbef04;
+    --text-color: #d3cfc9;
+    --yellow-text-color: #ebde4f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--primary-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    color: var(--text-color);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .3s;
+}
+
+button {
+    font: inherit;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-inline: auto;
+        padding: 0 15px;
+        width: 750px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        margin-inline: auto;
+        padding: 0 15px;
+        width: 970px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        margin-inline: auto;
+        padding: 0 15px;
+        width: 1100px;
+    }
+}
+
+#scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--yellow-text-color);
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+    place-content: center;
+    border-radius: 50%;
+    transition: .3s;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+}
