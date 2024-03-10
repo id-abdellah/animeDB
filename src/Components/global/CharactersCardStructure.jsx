@@ -8,7 +8,7 @@ export default function CharachterCardStructure({ data }) {
     return (
         <Link to={`/characters/${data.mal_id}`} className="char-item" data-charid={data.mal_id}>
             <div className="pic">
-                <img src={data.images.jpg.image_url} alt="" />
+                <img src={data.images.jpg.image_url} loading="lazy" alt="" />
                 <div className="favorites">
                     <span><FontAwesomeIcon icon="fa-solid fa-heart" /></span>
                     <span>{data.favorites}</span>

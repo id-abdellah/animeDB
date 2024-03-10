@@ -8,7 +8,7 @@ export default function AnimeCardStructure({ data }) {
             <Link to={`/animes/${data.mal_id}`}>
                 <div className="wrapper">
                     <div className="item-image">
-                        <img src={data.images.jpg.large_image_url} alt="" />
+                        <img src={data.images.jpg.large_image_url} loading="lazy" alt="" />
                         <div className="status">
                             <div className="score">
                                 <span>

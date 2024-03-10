@@ -93,7 +93,7 @@ function Details() {
                         <h2 className="tab-sub-title">General Informations</h2>
                         <div className="section-one">
                             <div className="pic">
-                                <img src={animeDetails?.data.images.jpg.large_image_url} alt="" />
+                                <img src={animeDetails?.data.images.jpg.large_image_url} loading="lazy" alt="" />
                                 <div className="rank">
                                     #{animeDetails?.data.rank}
                                 </div>
@@ -289,7 +289,7 @@ function CharactersCard({ data }) {
     return (
         <Link to={`/characters/${data.character.mal_id}`} className="char-item">
             <div className="pic">
-                <img src={data.character.images.jpg.image_url} alt="" />
+                <img src={data.character.images.jpg.image_url} loading="lazy" alt="" />
                 <div className="favorites">
                     <span><FontAwesomeIcon icon="fa-solid fa-heart" /></span>
                     <span>{data.favorites}</span>

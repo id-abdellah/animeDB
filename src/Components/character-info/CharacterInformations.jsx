@@ -67,7 +67,7 @@ function CharacterInformations() {
                             <div className="basic">
 
                                 <div className="pic-info">
-                                    <img src={charInfos?.data.images.jpg.image_url} alt="" />
+                                    <img src={charInfos?.data.images.jpg.image_url} loading="lazy" alt="" />
                                     <div className="other">
                                         <div>
                                             <span>Favourites</span>: {charInfos?.data.favorites} Lovers
@@ -98,7 +98,7 @@ function CharacterInformations() {
                                         charInfos?.data.voices.map(perosnObj => {
                                             return <Link to={perosnObj.person.url} target="_blank" key={Math.random()} className="person">
                                                 <div className="person-img">
-                                                    <img src={perosnObj.person.images.jpg.image_url} alt="" />
+                                                    <img src={perosnObj.person.images.jpg.image_url} loading="lazy" alt="" />
                                                 </div>
                                                 <div className="person-name">
                                                     <div className="name">{perosnObj.person.name}</div>
@@ -118,7 +118,7 @@ function CharacterInformations() {
                                         charAnimes?.data.map(animeObj => {
                                             return <Link to={`/animes/${animeObj.anime.mal_id}`} key={Math.random()}>
                                                 <div className="pic">
-                                                    <img src={animeObj.anime.images.jpg.large_image_url} alt="" />
+                                                    <img src={animeObj.anime.images.jpg.large_image_url} loading="lazy" alt="" />
                                                 </div>
                                                 <div className="name">
                                                     {animeObj.anime.title}

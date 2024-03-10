@@ -59,7 +59,7 @@ export default function Hero() {
     return (
         <section className="hero" >
             <div className="hero-images">
-                <img src={BACKGROUNDS_IMAGES[backgroundsIndex]} alt="" draggable="false" />
+                <img src={BACKGROUNDS_IMAGES[backgroundsIndex]} loading="lazy" alt="" draggable="false" />
                 <div className="overlay"></div>
                 <div className="next-arrow-container">
                     <div onClick={() => nextBackground()} className="arrow next-arrow"><FontAwesomeIcon icon="fa-solid fa-chevron-right" /></div>
@@ -95,6 +95,7 @@ function CoversSlider({ src, coverIndex, backgroundsIndex, setBackgroundsIndex }
                 className={coverIndex === backgroundsIndex ? `active` : null}
                 onClick={() => setBackgroundsIndex(coverIndex)}
                 draggable="false"
+                loading="lazy"
             />
         </div>
     )
